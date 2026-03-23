@@ -41,26 +41,31 @@ show_banner() {
  https://www.youtube.com/@aiisima
          Telegram :
      t.me/AiiSimaRajaIblis 
-                       
 EOF
     echo -e "${NC}"
-    echo -e "${GREEN}Device: $(get_device_name) | IP: $(get_local_ip)${NC}"
-    echo -e "${YELLOW}Session: $(date '+%Y-%m-%d %H:%M:%S')${NC}"
+    echo ""
+    echo -e "${GREEN}  Device: $(get_device_name)${NC}"
+    echo -e "${GREEN}  IP: $(get_local_ip)${NC}"
+    echo -e "${YELLOW}  Session: $(date '+%Y-%m-%d %H:%M:%S')${NC}"
     echo ""
 }
 
 show_menu() {
-    echo -e "${WHITE}┌─────────────────────────────────────────────────────────────────┐${NC}"
-    echo -e "${WHITE}│  ${GREEN}1.${NC} Scan Network              ${GREEN}6.${NC} Speed Test              ${WHITE}│${NC}"
-    echo -e "${WHITE}│  ${GREEN}2.${NC} Detect All Devices        ${GREEN}7.${NC} Deauth Detector         ${WHITE}│${NC}"
-    echo -e "${WHITE}│  ${GREEN}3.${NC} Port Scanner              ${GREEN}8.${NC} Firewall Setup          ${WHITE}│${NC}"
-    echo -e "${WHITE}│  ${GREEN}4.${NC} Traffic Monitor           ${GREEN}9.${NC} Intrusion Detection     ${WHITE}│${NC}"
-    echo -e "${WHITE}│  ${GREEN}5.${NC} Bandwidth Monitor         ${GREEN}10.${NC} Generate Report         ${WHITE}│${NC}"
-    echo -e "${WHITE}├─────────────────────────────────────────────────────────────────┤${NC}"
-    echo -e "${WHITE}│  ${YELLOW}11.${NC} Network Info    ${YELLOW}12.${NC} Ping Monitor    ${YELLOW}13.${NC} View Logs    ${WHITE}│${NC}"
-    echo -e "${WHITE}│  ${RED}0.${NC} Exit                                                           ${WHITE}│${NC}"
-    echo -e "${WHITE}└─────────────────────────────────────────────────────────────────┘${NC}"
-    echo -ne "${CYAN}[+] Select option: ${NC}"
+    echo -e "${CYAN}┌────────────────────────────────────────────────────────────────────┐${NC}"
+    echo -e "${CYAN}│                        NETWORK TOOLKIT MENU                        │${NC}"
+    echo -e "${CYAN}├────────────────────────────────────────────────────────────────────┤${NC}"
+    echo -e "${CYAN}│  ${GREEN}1.${NC} Scan Network                ${GREEN}6.${NC} Speed Test                        ${CYAN}│${NC}"
+    echo -e "${CYAN}│  ${GREEN}2.${NC} Detect All Devices          ${GREEN}7.${NC} Deauth Detector                   ${CYAN}│${NC}"
+    echo -e "${CYAN}│  ${GREEN}3.${NC} Port Scanner                ${GREEN}8.${NC} Firewall Setup                    ${CYAN}│${NC}"
+    echo -e "${CYAN}│  ${GREEN}4.${NC} Traffic Monitor             ${GREEN}9.${NC} Intrusion Detection               ${CYAN}│${NC}"
+    echo -e "${CYAN}│  ${GREEN}5.${NC} Bandwidth Monitor           ${GREEN}10.${NC} Generate Report                   ${CYAN}│${NC}"
+    echo -e "${CYAN}├────────────────────────────────────────────────────────────────────┤${NC}"
+    echo -e "${CYAN}│  ${YELLOW}11.${NC} Network Info          ${YELLOW}12.${NC} Ping Monitor          ${YELLOW}13.${NC} View Logs      ${CYAN}│${NC}"
+    echo -e "${CYAN}├────────────────────────────────────────────────────────────────────┤${NC}"
+    echo -e "${CYAN}│  ${RED}0.${NC} Exit                                                           ${CYAN}│${NC}"
+    echo -e "${CYAN}└────────────────────────────────────────────────────────────────────┘${NC}"
+    echo ""
+    echo -ne "${WHITE}➜ Select option: ${NC}"
 }
 
 main() {
@@ -83,8 +88,21 @@ main() {
             11) show_network_info ;;
             12) ping_monitor ;;
             13) view_logs ;;
-            0) echo -e "${GREEN}[+] Exiting...${NC}"; exit 0 ;;
-            *) echo -e "${RED}[!] Invalid option${NC}"; sleep 1 ;;
+            0) 
+                echo ""
+                echo -e "${GREEN}┌────────────────────────────────────────────────────────────────────┐${NC}"
+                echo -e "${GREEN}│  Thank you for using Network Security Toolkit!                    │${NC}"
+                echo -e "${GREEN}│  Goodbye!                                                          │${NC}"
+                echo -e "${GREEN}└────────────────────────────────────────────────────────────────────┘${NC}"
+                exit 0 
+                ;;
+            *) 
+                echo ""
+                echo -e "${RED}┌────────────────────────────────────────────────────────────────────┐${NC}"
+                echo -e "${RED}│  Invalid option! Please choose 0-13                                │${NC}"
+                echo -e "${RED}└────────────────────────────────────────────────────────────────────┘${NC}"
+                sleep 1 
+                ;;
         esac
     done
 }
