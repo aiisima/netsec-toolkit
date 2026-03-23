@@ -26,40 +26,38 @@ show_banner() {
     clear
     echo -e "${BLUE}"
     cat << "EOF"
-╔═══════════════════════════════════════════════════════════════════════╗
-║   ███╗   ██╗███████╗████████╗███████╗ ██████╗                     ║
-║   ████╗  ██║██╔════╝╚══██╔══╝██╔════╝██╔════╝                     ║
-║   ██╔██╗ ██║█████╗     ██║   ███████╗██║                          ║
-║   ██║╚██╗██║██╔══╝     ██║   ╚════██║██║                          ║
-║   ██║ ╚████║███████╗   ██║   ███████║╚██████╗                     ║
-║   ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚══════╝ ╚═════╝                     ║
-║                                                                       ║
-║              ████████╗ ██████╗  ██████╗ ██╗██╗  ██╗██╗████████╗     ║
-║              ╚══██╔══╝██╔═══██╗██╔═══██╗██║██║ ██╔╝██║╚══██╔══╝     ║
-║                 ██║   ██║   ██║██║   ██║██║█████╔╝ ██║   ██║        ║
-║                 ██║   ██║   ██║██║   ██║██║██╔═██╗ ██║   ██║        ║
-║                 ██║   ╚██████╔╝╚██████╔╝██║██║  ██╗██║   ██║        ║
-║                 ╚═╝    ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝   ╚═╝        ║
-║                                                                       ║
-║                     v1.0 - AIISIMA                      ║
-║              YouTube : https://www.youtube.com/@aiisima                    ║
-╚═══════════════════════════════════════════════════════════════════════╝
+               _   _  ____  _____  ___   ___             
+              ( \ ( )(  __)(_   _)/  _) (  _)            
+              | \\| || |_    | |  \_"-. | |              
+              ( )\\ )(  _)   ( )   __) )( )_             
+              /_\ \_\/____\  /_\  /___/ /___\ v1.0           
+                                                         
+                     _____  __    __   _  _     _  _____ 
+                    (_   _)(  )  (  ) ( )( ) __( )(_   _)
+                      | |  /  \  /  \ | || |/ /| |  | |  
+                      ( ) ( O  )( O  )( )( _ ( ( )  ( )  
+                      /_\  \__/  \__/ /_\/_\\_|/_\  /_\  
+         YouTube :
+ https://www.youtube.com/@aiisima
+         Telegram :
+     t.me/AiiSimaRajaIblis 
+                       
 EOF
     echo -e "${NC}"
-    echo -e "${GREEN}[+] Device: $(get_device_name) | IP: $(get_local_ip)${NC}"
-    echo -e "${YELLOW}[+] Session: $(date '+%Y-%m-%d %H:%M:%S')${NC}"
+    echo -e "${GREEN}Device: $(get_device_name) | IP: $(get_local_ip)${NC}"
+    echo -e "${YELLOW}Session: $(date '+%Y-%m-%d %H:%M:%S')${NC}"
     echo ""
 }
 
 show_menu() {
     echo -e "${WHITE}┌─────────────────────────────────────────────────────────────────┐${NC}"
-    echo -e "${WHITE}│  ${GREEN}1.${NC} Scan Network (Your Devices)     ${GREEN}6.${NC} Speed Test                       ${WHITE}│${NC}"
-    echo -e "${WHITE}│  ${GREEN}2.${NC} Detect All Devices              ${GREEN}7.${NC} Deauth Attack Detector            ${WHITE}│${NC}"
-    echo -e "${WHITE}│  ${GREEN}3.${NC} Port Scanner                    ${GREEN}8.${NC} Firewall Setup                   ${WHITE}│${NC}"
-    echo -e "${WHITE}│  ${GREEN}4.${NC} Traffic Monitor                 ${GREEN}9.${NC} Intrusion Detection              ${WHITE}│${NC}"
-    echo -e "${WHITE}│  ${GREEN}5.${NC} Bandwidth Monitor               ${GREEN}10.${NC} Generate Report                  ${WHITE}│${NC}"
+    echo -e "${WHITE}│  ${GREEN}1.${NC} Scan Network              ${GREEN}6.${NC} Speed Test              ${WHITE}│${NC}"
+    echo -e "${WHITE}│  ${GREEN}2.${NC} Detect All Devices        ${GREEN}7.${NC} Deauth Detector         ${WHITE}│${NC}"
+    echo -e "${WHITE}│  ${GREEN}3.${NC} Port Scanner              ${GREEN}8.${NC} Firewall Setup          ${WHITE}│${NC}"
+    echo -e "${WHITE}│  ${GREEN}4.${NC} Traffic Monitor           ${GREEN}9.${NC} Intrusion Detection     ${WHITE}│${NC}"
+    echo -e "${WHITE}│  ${GREEN}5.${NC} Bandwidth Monitor         ${GREEN}10.${NC} Generate Report         ${WHITE}│${NC}"
     echo -e "${WHITE}├─────────────────────────────────────────────────────────────────┤${NC}"
-    echo -e "${WHITE}│  ${YELLOW}11.${NC} Network Info        ${YELLOW}12.${NC} Ping Monitor     ${YELLOW}13.${NC} View Logs    ${WHITE}│${NC}"
+    echo -e "${WHITE}│  ${YELLOW}11.${NC} Network Info    ${YELLOW}12.${NC} Ping Monitor    ${YELLOW}13.${NC} View Logs    ${WHITE}│${NC}"
     echo -e "${WHITE}│  ${RED}0.${NC} Exit                                                           ${WHITE}│${NC}"
     echo -e "${WHITE}└─────────────────────────────────────────────────────────────────┘${NC}"
     echo -ne "${CYAN}[+] Select option: ${NC}"
